@@ -19,10 +19,8 @@ class CashbackHackServiceTest {
 
     @Test
     /*
-    проверяем, что при сумме меньше 1000 - нам должны сказать
-    на какую сумму нам надо еще положить чего-то в корзину,
-    чтобы получить кэшбек. В случае 900 рублей в корзине -
-    нам должны посоветовать добрать на 100 рублей
+    Проверяет, что сервис возвращает 100 рублей
+    при покупке на сумму 900 рублей.
     */
     void shouldReturn100IfAmountIs900() {
         CashbackHackService service = new CashbackHackService();
@@ -33,8 +31,8 @@ class CashbackHackServiceTest {
 
     @Test
     /*
-    проверяем, что при сумме равной 1000 - нам ничего не должны сказать,
-    те мы должны получить 0
+    Проверяет, что сервис возвращает 0 рублей
+    при покупке на сумму 1000 рублей.
     */
     void shouldReturn0IfAmountIs1000() {
         CashbackHackService service = new CashbackHackService();
@@ -45,8 +43,8 @@ class CashbackHackServiceTest {
 
     @Test
     /*
-    проверяем следующее граничное значение = берем 1100 и должны получить
-    в качестве совета 900 рублей
+    Проверяет, что сервис возвращает 900 рублей
+    при покупке на сумму 1100 рублей.
     */
     void shouldReturn900IfAmountIs1100() {
         CashbackHackService service = new CashbackHackService();
@@ -57,8 +55,8 @@ class CashbackHackServiceTest {
 
     @Test
     /*
-    проверяем, что при сумме равной 2000 - нам тоже ничего не должны сказать,
-    те мы должны получить 0
+    Проверяет, что сервис возвращает 0 рублей
+    при покупке на сумму 2000 рублей.
     */
     void shouldReturn0IfAmountIs2000() {
         CashbackHackService service = new CashbackHackService();
